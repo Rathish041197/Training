@@ -1,12 +1,12 @@
-#sum of even number in recursion
+# #sum of even number in recursion
 
-def sum_of_even(n)
-    return 0 if n < 1 
-    if (n >= 1)
-      return(n*2) + sum_of_even(n-1)
-    end
-  end
-  puts sum_of_even(10)
+# def sum_of_even(n)
+#     return 0 if n < 1 
+#     if (n >= 1)
+#       return(n*2) + sum_of_even(n-1)
+#     end
+#   end
+#   puts sum_of_even(10)
 
 
 
@@ -30,19 +30,20 @@ end
 puts binary_search(a, 30)
 
 
-#armstrong number using recursion
-def sum(number)
-    if(number > 0)
-      return((number % 10)**3) + sum(number/10)
-    end
-    return 0
-  end
-  def  is_armstrong?(number)
-    n=sum(number)
-    if number == n
-      puts "the given number is armstrong"
-    else
-      puts"the given number is not armstrong"
-    end
-  end
-  puts is_armstrong?(153)
+
+# #armstrong number using recursion
+# def sum(number)
+#     if(number > 0)
+#       return((number % 10)**3) + sum(number/10)
+#     end
+#     return 0
+#   end
+#   def  is_armstrong?(number)
+#     n=sum(number)
+#     if number == n
+#       puts "the given number is armstrong"
+#     else
+#       puts"the given number is not armstrong"
+#     end
+#   end
+#   puts is_armstrong?(153)

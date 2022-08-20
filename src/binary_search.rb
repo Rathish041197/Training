@@ -1,11 +1,11 @@
-def binary_search(arr, n)
+def binary_search(arr, num)
   low = 0
   high = arr.length - 1
-   while low < high
+   while low > high
      mid = high - low +1 / 2 +low
-     if  arr[mid] == n
-       return true
-     elsif  arr[mid] < n
+     if  arr[mid] == num
+       return mid
+     elsif  arr[mid] < num
        low = low + 1
        mid = high - low +1 / 2 +low
      else
@@ -15,6 +15,7 @@ def binary_search(arr, n)
    end
    false
 end
+
 
 
 arr = [5, 7, 11, 13, 15, 16, 21, 23, 25, 30]
@@ -35,7 +36,7 @@ end
 
 
 # In Range, non-existent
-[17, 8, 22, 27].each do |n|
+[1, 8, 22, 2].each do |n|
   if(-1 != binary_search(arr, n))
     raise "Error: Did not return -1 for number #{n}"
   end
