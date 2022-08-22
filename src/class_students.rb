@@ -1,4 +1,5 @@
-def initialize(rollno, name, age, dob, pincode)
+class Student
+    def initialize(rollno, name, age, dob, pincode)
     @rollno = rollno
     @name = name
     @dob = dob
