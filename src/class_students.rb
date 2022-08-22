@@ -7,7 +7,7 @@ class Student
     @pincode = pincode
   end
  
-  def intro
+  def data
     puts "rollno #{@rollno}, My name is #{@name} and I am #{@age} years old and DOB is #{@dob}, pincode: #{@pincode}"
   end
 end
@@ -20,5 +20,5 @@ s5 = Student.new(5, "lokesh", 21, "8/12/2001", 643889)
 s6 = Student.new(6, "rathish", 25, "4/11/1997", 643209)
 s7 = Student.new(7, "surya", 26, "31/10/1995", 643141)
 
-s6.intro
+s6.data
 
