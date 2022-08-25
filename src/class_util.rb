@@ -1,13 +1,13 @@
 class Util 
   def self.map(arr)
-    empty = []
-    for i in arr
+    result = []
+    for ele in arr
       if block_given?     
-        name =  yield (i)
-      empty << name
+        name =  yield (ele)
+        result << name
       end
     end
-    empty
+    result
   end 
 end
 
