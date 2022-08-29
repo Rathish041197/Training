@@ -1,4 +1,4 @@
-class Util 
+class Util   
   def self.map(arr)
     name = []
     for element in arr
@@ -7,7 +7,7 @@ class Util
       end
     end
     name
-  end 
+  end
 
   def self.select(arr)
     even = []
