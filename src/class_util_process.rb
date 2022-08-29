@@ -14,7 +14,20 @@ class Util
      def self.select(arr)
       process(arr){|result, e| result << e if yield(e)}
     end
-  end
+
+    def self.max_by(arr)
+        result = process(arr){|result,e|
+          if result.length == 0
+            result << e
+          else
+            if (result[0] <=> e) == -1
+              result[0] = e
+            end
+          end
+        }
+        result[0]
+    end
+end
   
   class Students
     attr_reader :id, :college, :branch, :section, :roll_no, :name, :aadhar_no, :pan_no, :pincode
@@ -37,11 +50,16 @@ class Util
   cindy = Students.new(19106003, "arcas", "bsc_cs", "section_A", 03, "cindy", 552536654858, "BHVNN4851J", 633218)
   john = Students.new(19106004, "arcas", "bsc_cs", "section_A", 04, "john", 872536654858, "BSDFC4851J", 659415)
   
-  arr = ["ann", "robin", "cindy", "john"]
-  result = Util.map(arr){|i| i}
+  arr = [ann, robin, cindy, john]
+  result = Util.map(arr){|i| i.name}
   print result
   
   #select
   arr = 20.times.to_a
   result = Util.select(arr){|i| i % 2 == 0 }
   print result
+  
+  #max_by
+  arr = 20.times.to_a
+  res = Util.max_by(arr){|i| i}
+  puts res
