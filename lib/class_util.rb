@@ -1,4 +1,4 @@
-class Util   
+class Util 
   def self.map(arr)
     name = []
     for element in arr
@@ -44,7 +44,7 @@ class Students
   attr_reader :id, :college, :branch, :section, :roll_no, :name, :aadhar_no, :pan_no, :pincode
   def initialize(id, college, branch, section, roll_no, name, aadhar_no, pan_no, pincode)
     @id = id
-    @college = college
+    @college = college  
     @branch = branch
     @section = section
     @roll_no = roll_no
